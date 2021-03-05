@@ -1041,7 +1041,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.18845217, y: 0.000000008449042, z: -0.0000000016212899, w: 0.98208237}
+  m_LocalRotation: {x: 0.18845217, y: -0.000000008449042, z: 0.0000000016212901, w: 0.98208237}
   m_LocalPosition: {x: 0, y: 6.83, z: -5.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1230,8 +1230,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1261858812}
-  currentVal: 0
-  maxVal: 0
 --- !u!114 &1261858812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1277,7 +1275,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1499,7 +1497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1641,7 +1639,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056050212}
-  m_LocalRotation: {x: 0.18845217, y: 0.000000008449042, z: -0.0000000016212899, w: 0.98208237}
+  m_LocalRotation: {x: 0.18845217, y: -0.000000008449042, z: 0.0000000016212901, w: 0.98208237}
   m_LocalPosition: {x: 0, y: 6.83, z: -5.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
