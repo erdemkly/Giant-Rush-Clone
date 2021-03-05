@@ -16,12 +16,21 @@ public class LevelManager : MonoSingleton<LevelManager>
 
     private void Initialize()
     {
-        LoadAllLevels();
+        PullAllLevels();
+        PlayerPrefs.SetInt("Level",PlayerPrefs.HasKey("Level")?PlayerPrefs.GetInt("Level"):0);
     }
 
-    private void LoadAllLevels()
+    private void PullAllLevels()
     {
         var resourcesLevel = Resources.LoadAll<Level>("Levels");
         allLevels = resourcesLevel.ToList();
+    }
+
+    public void SetLevel(int level, bool keep)
+    {
+        //Level yükleme..
+        
+        if (!keep) return;
+        PlayerPrefs.SetInt("Level",level);
     }
 }
