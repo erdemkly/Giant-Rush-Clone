@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 679649053}
   - component: {fileID: 679649052}
   m_Layer: 5
-  m_Name: Border (1)
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -601,7 +601,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: 2.7107536e-20, w: 7.737127e+25}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1041,7 +1041,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.18845217, y: -0.000000008449042, z: 0.0000000016212899, w: 0.98208237}
+  m_LocalRotation: {x: 0.18845217, y: 0.000000008449042, z: -0.0000000016212899, w: 0.98208237}
   m_LocalPosition: {x: 0, y: 6.83, z: -5.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1231,6 +1231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1261858812}
   currentVal: 0
+  maxVal: 0
 --- !u!114 &1261858812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,7 +1276,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1482,8 +1483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.44421387, y: -0.32403564}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.14196777, y: -0.3241577}
+  m_SizeDelta: {x: -0.60461426, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1374203210
 MonoBehaviour:
@@ -1498,7 +1499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.25013348, g: 0.5064128, b: 0.7264151, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1640,7 +1641,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056050212}
-  m_LocalRotation: {x: 0.18845217, y: -0.000000008449042, z: 0.0000000016212899, w: 0.98208237}
+  m_LocalRotation: {x: 0.18845217, y: 0.000000008449042, z: -0.0000000016212899, w: 0.98208237}
   m_LocalPosition: {x: 0, y: 6.83, z: -5.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1699,7 +1700,7 @@ GameObject:
   - component: {fileID: 2110643052}
   - component: {fileID: 2110643054}
   m_Layer: 5
-  m_Name: Border
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1723,7 +1724,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.02078247, y: -0.000030517578}
-  m_SizeDelta: {x: 0.84680176, y: -14.382751}
+  m_SizeDelta: {x: -10.803406, y: -14.382751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2110643052
 MonoBehaviour:

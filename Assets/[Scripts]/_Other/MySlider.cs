@@ -9,37 +9,46 @@ using UnityEngine.UI;
 public class MySlider : MonoBehaviour
 {
     public Slider slider;
-    public float currentVal;
-    
+    private int maxVal;
+    private int currentVal;
+
+    [ShowInInspector,PropertyRange(0,"maxVal")]
+    public int CurrentVal
+    {
+        get => currentVal;
+        set
+        {
+            value = Mathf.Clamp(value, 0, maxVal);
+            currentVal = value;
+            slider.DOValue(value, 0.2f);
+        }
+    }
     private void Start()
     {
-        SetMaxVal(100);
+        Initialize();
     }
 
-    public void SetVal(float val)
+    private void Initialize()
     {
-        currentVal = val;
-        currentVal = Mathf.Clamp(currentVal, 0, 100);
-        slider.DOValue(val, 0.2f);
+        SetMaxVal();
     }
-    private void SetMaxVal(int val)
+    
+    private void SetMaxVal()
     {
-        slider.maxValue = val;
+        maxVal = (int)slider.maxValue;
     }
-    public float GetCurrentVal()
+    
+    public void SetValue(int val)
     {
-        return slider.value;
+        CurrentVal = val;
     }
-    [Button("IncreaseBar")]
-    public void IncreaseBar(float val)
+    [Button]
+    public void AddValue(int val)
     {
-        SetVal(currentVal+val);
+        SetValue(currentVal+val);
     }
-    [Button("DecreaseBar")]
-    public void DecreaseBar(float val)
-    {
-        SetVal(currentVal-val);
-    }
+    
+    
     
     
     
