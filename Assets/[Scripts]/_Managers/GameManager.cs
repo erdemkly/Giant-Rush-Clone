@@ -7,6 +7,8 @@ using UnityEngine.Events;
 public class GameManager : MonoSingleton<GameManager>
 {
     public UnityEvent startEvent, winEvent, loseEvent;
+
+    public PlayerController currentPlayer;
     // Start is called before the first frame update
     void Start()
     {
