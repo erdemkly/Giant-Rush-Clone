@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/.idea.Giant-Rush-Clone.iml
+/modules.xml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../:\Unity Projects\Giant-Rush-Clone\.idea\.idea.Giant-Rush-Clone\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
