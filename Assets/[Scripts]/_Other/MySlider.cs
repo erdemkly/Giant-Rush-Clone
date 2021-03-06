@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public class MySlider : MonoBehaviour
 {
     public Slider slider;
+    public Gradient gradient;
+    public Image fill;
     private int maxVal;
     private int currentVal;
 
@@ -36,6 +38,7 @@ public class MySlider : MonoBehaviour
     private void SetMaxVal()
     {
         maxVal = (int)slider.maxValue;
+        fill.color = gradient.Evaluate(0f);
     }
     
     public void SetValue(int val)
@@ -46,6 +49,7 @@ public class MySlider : MonoBehaviour
     public void AddValue(int val)
     {
         SetValue(currentVal+val);
+        fill.color = gradient.Evaluate(slider.normalizedValue);
     }
     
     
