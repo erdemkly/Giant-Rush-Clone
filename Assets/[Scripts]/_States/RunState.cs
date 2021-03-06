@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class RunState : MonoBehaviour, IState
 {
+    
     public void OnPointerDown(PointerEventData eventData)
     {
         
