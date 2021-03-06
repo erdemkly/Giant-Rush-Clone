@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [HideInInspector]public Rigidbody rb;
-    // Start is called before the first frame update
+    [SerializeField] private float velocity;
     void Start()
     {
         Initialize();
@@ -18,6 +19,11 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        transform.position += Vector3.forward * Time.deltaTime * velocity;
+    }
+    
 
     [Button("Jump")]
     public void Jump()
