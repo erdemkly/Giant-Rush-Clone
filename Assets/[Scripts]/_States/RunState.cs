@@ -32,12 +32,12 @@ public class RunState : MyState,IState
         }
 
         var pos = GameManager.Instance.currentPlayer.transform.position;
-        pos.x += deltaX*Time.deltaTime*0.01f;
+        pos.x += deltaX*Time.deltaTime*0.02f;
         pos.x = Mathf.Clamp(pos.x, -2.2f, 2.2f);
         GameManager.Instance.currentPlayer.transform.position = pos;
         
         
-        var rot = deltaX * 2;
+        var rot = deltaX;
         rot = Mathf.Clamp(rot, -45, 45);
         GameManager.Instance.currentPlayer.model.transform.DOLocalRotate(new Vector3(0, rot, 0), 0.1f);
     }
