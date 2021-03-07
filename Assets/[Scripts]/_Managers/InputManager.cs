@@ -10,6 +10,8 @@ public class InputManager : MonoSingleton<InputManager> , IPointerDownHandler,IP
 
     public void SetState(IState state)
     {
+        
+
         currentState = state;
     }
 

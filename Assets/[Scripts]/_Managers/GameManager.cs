@@ -9,15 +9,21 @@ public class GameManager : MonoSingleton<GameManager>
     public UnityEvent startEvent, winEvent, loseEvent;
 
     public PlayerController currentPlayer;
+
+    public GameObject statesParent;
     // Start is called before the first frame update
     void Start()
     {
         Initialize();
+        startEvent.AddListener(()=>InputManager.Instance.SetState(new RunState()));
+       InputManager.Instance.SetState(new EmptyState());
+        startEvent.Invoke();
+        
     }
 
     private void Initialize()
     {
-        InputManager.Instance.SetState(new EmptyState());
+       // InputManager.Instance.SetState(new EmptyState());
     }
 
 }

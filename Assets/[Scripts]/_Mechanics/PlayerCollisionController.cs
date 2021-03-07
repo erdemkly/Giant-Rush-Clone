@@ -12,6 +12,7 @@ public class PlayerCollisionController : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Star":
+                Destroy(other.gameObject);
                 mySlider.AddValue(10);
                 break;
         }

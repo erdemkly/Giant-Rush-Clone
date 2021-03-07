@@ -23,6 +23,7 @@ public class MySlider : MonoBehaviour
             value = Mathf.Clamp(value, 0, maxVal);
             currentVal = value;
             slider.DOValue(value, 0.2f);
+            fill.color = gradient.Evaluate(slider.normalizedValue);
         }
     }
     private void Start()
@@ -49,7 +50,6 @@ public class MySlider : MonoBehaviour
     public void AddValue(int val)
     {
         SetValue(currentVal+val);
-        fill.color = gradient.Evaluate(slider.normalizedValue);
     }
     
     

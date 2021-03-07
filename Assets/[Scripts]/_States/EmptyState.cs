@@ -1,10 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class EmptyState :MonoBehaviour,IState
+public class EmptyState :MyState,IState
 {
+   public EmptyState()
+    {
+       
+    }
+    private void Update()
+    {
+        
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
     }
