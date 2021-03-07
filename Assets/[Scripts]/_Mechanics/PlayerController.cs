@@ -10,13 +10,16 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]public Rigidbody rb;
     [HideInInspector] public Animator anim;
     [HideInInspector] public GameObject model;
-     public float forwardSpeed;
+    public float forwardSpeed;
 
+    private void Awake()
+    {
+        GameManager.Instance.currentPlayer = this;
+    }
 
     void Start()
     {
         Initialize();
-        GameManager.Instance.currentPlayer = this;
         SetAnimBool("Running",true);
     }
 
