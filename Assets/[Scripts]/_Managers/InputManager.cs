@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -6,13 +7,16 @@ using UnityEngine.EventSystems;
 public class InputManager : MonoSingleton<InputManager> , IPointerDownHandler,IPointerUpHandler,IDragHandler,IEndDragHandler
 {
 
-    public IState currentState;
+    [HideInInspector]public MyState currentState;
 
-    public void SetState(IState state)
+    public void SetState(MyState state)
     {
-        
-
         currentState = state;
+    }
+
+    public void Update()
+    {
+     currentState.Loop();   
     }
 
     public void OnPointerDown(PointerEventData eventData)

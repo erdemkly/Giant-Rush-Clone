@@ -15,9 +15,10 @@ public class GameManager : MonoSingleton<GameManager>
     void Start()
     {
         Initialize();
-        startEvent.AddListener(()=>InputManager.Instance.SetState(statesParent.AddComponent<RunState>()));
-        startEvent.Invoke();
+        startEvent.AddListener(()=>InputManager.Instance.SetState(new RunState()));
         
+        startEvent.Invoke();
+        InputManager.Instance.SetState(new EmptyState());
     }
 
     private void Initialize()

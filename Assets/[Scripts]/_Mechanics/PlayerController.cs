@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]public Rigidbody rb;
     [HideInInspector] public Animator anim;
     [HideInInspector] public GameObject model;
-    [SerializeField] private float forwardSpeed;
+     public float forwardSpeed;
 
 
     void Start()
@@ -27,10 +27,6 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
-    {
-        SetVelocity(new Vector3(rb.velocity.x,rb.velocity.y,forwardSpeed));
-    }
 
     private void Update()
     {

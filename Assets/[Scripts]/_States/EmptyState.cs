@@ -4,30 +4,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class EmptyState :MyState,IState
+public class EmptyState :MyState
 {
    public EmptyState()
     {
        
     }
-    private void Update()
-    {
-        
-    }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-    }
+   public override void Loop()
+   {
+       print("Empty state");
+   }
 
-    public void OnPointerUp(PointerEventData eventData)
-    {
-    }
+   public override void OnPointerDown(PointerEventData eventData)
+   {
+   }
 
-    public void OnDrag(PointerEventData eventData)
+    public override void OnPointerUp(PointerEventData eventData)
     {
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public override void OnDrag(PointerEventData eventData)
+    {
+    }
+
+    public override void OnEndDrag(PointerEventData eventData)
     {
     }
 }
