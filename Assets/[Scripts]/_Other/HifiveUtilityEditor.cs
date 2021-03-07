@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Packages.HifiveUtilities.Editor
 {
+    #if UNITY_EDITOR
     public class HifiveUtilityEditor : UnityEditor.Editor
     {
         private static GameObject _screenCapture;
@@ -46,4 +47,5 @@ namespace Packages.HifiveUtilities.Editor
         #endregion
 
     }
+    #endif
 }
