@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoSingleton<UIManager>
 {
     // Start is called before the first frame update
+    public TextMeshProUGUI txtAnim;
     void Start()
     {
         
@@ -14,5 +17,16 @@ public class UIManager : MonoSingleton<UIManager>
     void Update()
     {
         
+    }
+
+    public void AnimText(string txt, Vector3 pos)
+    {
+        txtAnim.transform.position = Camera.main.WorldToScreenPoint(pos);
+        txtAnim.text = txt;
+        DOTween.Kill("animText");
+        DOVirtual.DelayedCall(0.2f, () =>
+        {
+            txtAnim.text = "";
+        }).SetId("animText");
     }
 }
