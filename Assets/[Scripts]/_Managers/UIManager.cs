@@ -8,6 +8,7 @@ public class UIManager : MonoSingleton<UIManager>
 {
     // Start is called before the first frame update
     public TextMeshProUGUI txtAnim;
+    public TextMeshProUGUI txtStarCount;
     void Start()
     {
         
@@ -19,6 +20,10 @@ public class UIManager : MonoSingleton<UIManager>
         
     }
 
+    public void AddStar(int count,Vector3 pos)
+    {
+        
+    }
     public void AnimText(string txt, Vector3 pos)
     {
         txtAnim.transform.position = Camera.main.WorldToScreenPoint(pos);
