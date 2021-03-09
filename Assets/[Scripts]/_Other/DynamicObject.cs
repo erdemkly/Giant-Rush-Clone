@@ -44,7 +44,6 @@ public class DynamicObject : MonoBehaviour
             case ObjectType.Star: 
                 affectObject.AddListener(() =>
                 {
-                    StarCollision();
                     Destroy(gameObject);
                 });
                 break;
@@ -57,8 +56,6 @@ public class DynamicObject : MonoBehaviour
         var scaleAmount = isEqual ? 0.2f : -0.2f;
         GameManager.Instance.currentPlayer.ChangeScale(scaleAmount);
         UIManager.Instance.AnimText(isEqual?"+1":"-1",transform.position);
-        UIManager.Instance.SetSlider(isEqual? 10 : -10);
-        
     }
 
     private void ChangeColorCollision()
@@ -68,6 +65,6 @@ public class DynamicObject : MonoBehaviour
 
     private void StarCollision()
     {
-        UIManager.Instance.AddStar(10,transform.position);
+        
     }
 }
