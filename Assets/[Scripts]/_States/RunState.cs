@@ -12,7 +12,7 @@ public class RunState : MyState
 
     public RunState()
     {
-        
+        GameManager.Instance.currentPlayer.SetAnimBool("Running", true);
     }
     public override void  Loop()
     {

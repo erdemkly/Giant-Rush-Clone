@@ -13,7 +13,7 @@ public class EmptyState :MyState
 
    public override void Loop()
    {
-       print("Empty state");
+       
    }
 
    public override void OnPointerDown(PointerEventData eventData)

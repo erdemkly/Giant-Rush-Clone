@@ -14,13 +14,16 @@ public class PlayerController : MonoBehaviour
     public Renderer meshRenderer;
      public float forwardSpeed;
 
+     private void Awake()
+     {
+         GameManager.Instance.currentPlayer = this;
+     }
 
     void Start()
     {
-        
         Initialize();
         GameManager.Instance.currentPlayer = this;
-        SetAnimBool("Running",true);
+        //SetAnimBool("Running",true);
     }
 
 

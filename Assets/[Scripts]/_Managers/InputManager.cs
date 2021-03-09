@@ -38,4 +38,9 @@ public class InputManager : MonoSingleton<InputManager> , IPointerDownHandler,IP
     {
         currentState.OnEndDrag(eventData);
     }
+
+    public void StartButton()
+    {
+        GameManager.Instance.startEvent.Invoke();
+    }
 }

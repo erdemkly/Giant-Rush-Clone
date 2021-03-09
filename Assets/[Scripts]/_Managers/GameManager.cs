@@ -22,7 +22,7 @@ public struct MyColor
 }
 public class GameManager : MonoSingleton<GameManager>
 {
-    public UnityEvent startEvent, winEvent, loseEvent;
+    public UnityEvent idleEvent, startEvent, winEvent, loseEvent;
 
     public PlayerController currentPlayer;
 
@@ -44,9 +44,9 @@ public class GameManager : MonoSingleton<GameManager>
     void Start()
     {
         Initialize();
+        idleEvent.AddListener(()=>InputManager.Instance.SetState(new EmptyState()));
         startEvent.AddListener(()=>InputManager.Instance.SetState(new RunState()));
-        
-        startEvent.Invoke();
+        idleEvent.Invoke();
        
     }
 
