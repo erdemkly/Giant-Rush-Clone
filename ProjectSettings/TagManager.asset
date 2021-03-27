@@ -8,6 +8,7 @@ TagManager:
   - ColorChange
   - LittleMan
   - Canvas
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Wall
+  - Player
   - 
   - 
   - 

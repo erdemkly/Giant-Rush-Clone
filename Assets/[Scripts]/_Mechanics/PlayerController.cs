@@ -63,4 +63,9 @@ public class PlayerController : MonoBehaviour
     {
         anim.SetBool(animName,active);
     }
+
+    public void TriggerKickAnim()
+    {
+        anim.SetTrigger("Kick");
+    }
 }
