@@ -10,9 +10,22 @@ public class CameraManager : MonoSingleton<CameraManager>
 
     public void SetCamera(int index)
     {
-        for (int i = 0; i < virtualCameras.Length; i++)
-        {
-            virtualCameras[i].enabled = index == i;
-        }
+        virtualCameras[index].gameObject.SetActive(true);
+    }
+
+    public void DeactiveCameraWithDelay(int index, float delay)
+    {
+        StartCoroutine(DeactiveCameraIE(index, delay));
+    }
+
+    IEnumerator DeactiveCameraIE(int index, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        DeactiveCamera(index);
+    }
+
+    public void DeactiveCamera(int index)
+    {
+        virtualCameras[index].gameObject.SetActive(false);
     }
 }

@@ -81,24 +81,22 @@ public class DynamicObject : MonoBehaviour
 
     private void WallCollision()
     {
+        CameraManager.Instance.SetCamera(1);
         StartCoroutine(BreakTheWall());
+        CameraManager.Instance.DeactiveCameraWithDelay(1,1);
         StartCoroutine(DestroyGameObjectIE(3));
     }
 
     IEnumerator BreakTheWall()
     {
+        yield return new WaitForSeconds(0.3f);
         GameManager.Instance.currentPlayer.TriggerKickAnim();
         Vector3 explosionPos = GameManager.Instance.currentPlayer.transform.position;
-        
-        yield return new WaitForSeconds(0.15f);
-        
         explosionPos.y = 0.5f;
-        explosionPos.z += 0.5f;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, 2);
         foreach (Collider hit in colliders)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
-            
             if (rb != null && hit.tag == "Wall")
             {
                 rb.isKinematic = false;
