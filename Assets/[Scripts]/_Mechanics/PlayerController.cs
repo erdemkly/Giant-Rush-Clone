@@ -7,13 +7,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-     public MyColor.MyColorEnum currentColor;
-     [HideInInspector]public Rigidbody rb;
-     [HideInInspector] public Animator anim;
-     public GameObject model;
-     public Renderer meshRenderer;
+    public MyColor.MyColorEnum currentColor;
+    [HideInInspector]public Rigidbody rb;
+    [HideInInspector] public Animator anim;
+    public GameObject model;
+    public Renderer meshRenderer;
      public float forwardSpeed;
-    
 
      private void Awake()
      {
